@@ -1,0 +1,25 @@
+﻿<Page x:Class="Зачет.View.Pages.MoviePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Зачет.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1600"
+      Title="MoviePage">
+
+    <Grid>
+        <ListView Grid.Row="2"
+                  FontSize="20"
+                  Name="ProductLv">
+            <ListView.View >
+                <GridView >
+                    <GridViewColumn Header="Id" DisplayMemberBinding="{Binding Path=Id}"/>
+                    <GridViewColumn Header="Название" DisplayMemberBinding="{Binding Path=Name}"/>
+                    <GridViewColumn Header="Дата создания" DisplayMemberBinding="{Binding Path=CreatedDate}" HeaderStringFormat="dd/MM/yyyy"/>
+                    <GridViewColumn Header="Цена" DisplayMemberBinding="{Binding Path=Price}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Page>

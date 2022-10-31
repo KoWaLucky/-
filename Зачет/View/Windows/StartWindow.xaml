@@ -1,0 +1,36 @@
+﻿<Window x:Class="Зачет.View.Windows.StartWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Зачет.View.Windows"
+        mc:Ignorable="d"
+        Title="Главное окно" Height="900" Width="1600" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid Background="Indigo">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+
+            </Grid.ColumnDefinitions>
+            
+                <Button Content="Фильмы" 
+                        Style="{DynamicResource MenuButtonStyle}"
+                        Name="Movies"
+                        Click="Movies_Click"/>
+
+            <Button Content="Сеансы"
+                    Grid.Column="2"
+                    Style="{DynamicResource MenuButtonStyle}"
+                        Name="Seans"
+                    Click="Seans_Click"/>
+            <Frame
+               NavigationUIVisibility="Hidden"
+               Name="MovieFrm" Margin="0,70,0,-800" Grid.ColumnSpan="2"/>
+        </Grid>
+    </Grid>
+</Window>
